@@ -52,8 +52,8 @@ const Header = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Chinese Chicken</h3>
+          <p>..........So much Delicious.........</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
@@ -63,8 +63,8 @@ const Header = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Chinese Burger</h3>
+          <p>......Soo much Yummy.......</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -74,9 +74,9 @@ const Header = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Chinese Strabery</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            .......Thats really very tasty.......
           </p>
         </Carousel.Caption>
       </Carousel.Item>

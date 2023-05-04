@@ -2,5 +2,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-bottom: 50px;
+}
+.sec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+}
+.cimg{
+  width: 720px;
+height: 520px;
 }
