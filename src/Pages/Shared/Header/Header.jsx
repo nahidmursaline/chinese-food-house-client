@@ -5,31 +5,41 @@ import carousel1 from '../../../assets/carousel-1.jpg'
 import carousel2 from '../../../assets/carousel-2.jpg'
 import carousel3 from '../../../assets/carousel-3.jpg'
 import './Header.css';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { authContext } from '../../../Providers/AuthProvider';
 
 const Header = () => {
+  const {user} = useContext(authContext);
     return (
         <div>
-            <div>
+            {/* <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <Navbar.Brand href="#home">Chinese Food House</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
+           <Link to={'/'}>Home</Link>
             <Nav.Link href="#pricing">Blog</Nav.Link>
             
           </Nav>
           <Nav>
-            <Nav.Link href="#deets"><img style={{"height" : "38px"}} src={img} alt="" /></Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-            <Button variant="secondary">Login</Button>
-            </Nav.Link>
+            {
+              user && <img style={{"height" : "38px"}} src={img} alt="" />
+            }
+            
+            <Button variant="secondary">{user.displayName}</Button>
+            { user ?
+              <Button variant="secondary">LogOut</Button>:
+              <Link to={"/login"}><Button variant="secondary">LogIn</Button></Link>}
+            
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-            </div>
+            </div> */}
 
 
             <div>

@@ -14,7 +14,7 @@ const Home = () => {
                 key={data.id}
                 data = {data}
                 ></AllData>)
-          }
+            }
           </div>
         </div>
     );
