@@ -6,6 +6,8 @@ import DataDetails from '../Pages/Home/DataDetails/DataDetails';
 import Home from '../Pages/Home/Home/Home';
 import LogIn from '../Pages/Home/LogIn/LogIn';
 import Register from '../Pages/Home/Register/Register';
+import PrivateRoute from './PrivateRoute/privateRoute';
+
 
 
 const router = createBrowserRouter([
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/data/:id',
-          element: <DataDetails></DataDetails>,
+          element: <PrivateRoute><DataDetails></DataDetails></PrivateRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/data/${params.id}`)
         }
        
