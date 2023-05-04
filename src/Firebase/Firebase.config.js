@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable' , import.meta.env.VITE_apiKey)
 const firebaseConfig = {
   apiKey: "AIzaSyB_duxH9W-EdxQvtZAV0-Hm14_ycp4G6Xk",
   authDomain: "chinese-food-house-94b3f.firebaseapp.com",

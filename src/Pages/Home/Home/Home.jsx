@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <h2>This is home {allData.length}</h2>
-          <div className='card'>
+          <div className='cardd'>
           {
             allData.map(data => <AllData 
                 key={data.id}
