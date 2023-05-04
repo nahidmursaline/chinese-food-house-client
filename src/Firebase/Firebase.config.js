@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 console.log('environment variable' , import.meta.env.VITE_apiKey)
 const firebaseConfig = {
-  apiKey: "AIzaSyB_duxH9W-EdxQvtZAV0-Hm14_ycp4G6Xk",
-  authDomain: "chinese-food-house-94b3f.firebaseapp.com",
-  projectId: "chinese-food-house-94b3f",
-  storageBucket: "chinese-food-house-94b3f.appspot.com",
-  messagingSenderId: "85621562549",
-  appId: "1:85621562549:web:74dbabf21822570a1e32fc"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId 
 };
 
 // Initialize Firebase
