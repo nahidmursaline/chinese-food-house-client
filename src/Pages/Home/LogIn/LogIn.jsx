@@ -1,4 +1,4 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
@@ -8,11 +8,12 @@ import { authContext } from '../../../Providers/AuthProvider';
 
 const LogIn = () => {
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider()
 
 
 const handleGoogleSignin = ()=>{
-  signInWithPopup(auth, provider)
+  signInWithPopup(auth, googleProvider)
   .then(result => {
     const user = result.user;
   })
@@ -43,6 +44,17 @@ const handleLogin = event =>{
 
 }
 
+const handleGithubSignin = ()=> {
+  signInWithPopup(auth, githubProvider)
+  .then(result => {
+    const logUser = result.user;
+    
+  })
+  .catch(error => {
+    console.log(error.message)
+  })
+}
+
     return (
         <Container className='w-50 mx-auto'>
             <h3>Please Login</h3>
@@ -65,6 +77,9 @@ const handleLogin = event =>{
       </Button><br /><br />
       <Button onClick={handleGoogleSignin} variant="primary" type="submit">
       Google Login
+      </Button><br /><br />
+      <Button onClick={handleGithubSignin} variant="primary" type="submit">
+      GitHub Login
       </Button>
       <br />
       <Form.Text className="text-secondary">Don't Have an Account?
