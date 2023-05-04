@@ -27,7 +27,12 @@ const DataDetails = () => {
             <p>Likes: {likes}</p>
             <p>Years of Experience: {years_of_experience}</p>
             <p>Number of Recipies: {num_recipes}</p>
-            <p></p>
+            <h6>Recipes Name: {recipes[0].name}</h6>
+            <p>Recipes description: {recipes[0].description}</p>
+            <p>Recipes ingredients: {recipes[0].ingredients}</p>
+            <p>Recipes ingredients: {recipes[0].ingredients}</p>
+            <p>Recipes cooking_method: {recipes[0].cooking_method}</p>
+            <p>Recipes rating: {recipes[0].rating}</p>
             
           </Card.Text>
           

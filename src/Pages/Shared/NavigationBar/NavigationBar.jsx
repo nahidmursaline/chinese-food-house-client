@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { authContext } from '../../../Providers/AuthProvider';
 import img from '../../../assets/Mursaline.jpg'
 import ActiveLink from '../../Home/Active Link/ActiveLink';
+import './NavigationBar.css'
 
 const NavigationBar = () => {
     const {user, logOut} = useContext(authContext);
@@ -21,8 +22,9 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
-           <ActiveLink to={'/'}>Home</ActiveLink>
-           <Link to={'/login/blog'}>Blog</Link>
+          
+          <div className='m-2 btn btn-primary tex'><ActiveLink  to={'/'}>Home</ActiveLink> </div>
+           <div className='m-2 btn btn-primary tex'><ActiveLink to={'/login/blog'}>Blog</ActiveLink></div>
             
             
           </Nav>
@@ -33,10 +35,10 @@ const NavigationBar = () => {
             
             
             { user ?
-              <Button onClick={handleLogOut} variant="secondary">LogOut</Button>:
+              <Button className='ms-4' onClick={handleLogOut} variant="primary">LogOut</Button>:
               <div>
-                <Link to={"/login/login"}><Button variant="secondary">LogIn</Button></Link>
-                <Link to={"/login/register"}><Button variant="secondary">Register</Button></Link>
+                <Link to={"/login/login"}><Button   variant="primary">LogIn</Button></Link>
+                <Link to={"/login/register"}><Button className='ms-4' variant="primary">Register</Button></Link>
               </div>
                 }
             
