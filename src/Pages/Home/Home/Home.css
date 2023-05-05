@@ -13,6 +13,18 @@
   gap: 30px;
 
 }
+
+@media screen and (max-width:576px){
+  .sec{
+      flex-direction: column;
+  }
+  .cardd{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  
+}
+
 .cimg{
   width: 720px;
 height: 520px;

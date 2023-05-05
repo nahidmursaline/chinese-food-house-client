@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('http://localhost:5000/data')
+            loader: ()=> fetch('https://chinese-food-house-server-nahidmursalinee-gmailcom.vercel.app/data')
         },
         {
           path: '/*',
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         {
           path: '/data/:id',
           element: <PrivateRoute><DataDetails></DataDetails></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/data/${params.id}`)
+          loader: ({params})=> fetch(`https://chinese-food-house-server-nahidmursalinee-gmailcom.vercel.app/data/${params.id}`)
         }
        
       ]

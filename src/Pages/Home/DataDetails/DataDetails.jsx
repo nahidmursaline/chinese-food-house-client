@@ -1,18 +1,29 @@
 import React from 'react';
+import { useState } from 'react';
 
 
-import { Card, Container } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const DataDetails = () => {
+  const notify = () => toast("Add to Favourite!");
     const details = useLoaderData();
     const {name,picture, bio, recipes, likes, years_of_experience, num_recipes,} = details;
     
     console.log(details)
-    
+
+    const [disable, setDisable] = useState(false);
+
+    const handleFavourite = ()=> {
+        setDisable(true)
+        notify()
+    }
 
    
     return (
+
+
         <div>
             <h1 className='text-center mt-5'>Chef's details</h1>
             
@@ -35,6 +46,8 @@ const DataDetails = () => {
             <p>Recipes rating: {recipes[0].rating}</p>
             
           </Card.Text>
+          <Button onClick={handleFavourite} variant="primary" disabled ={disable && true}>Favourite</Button>
+          <ToastContainer  />
           
         </Card.Body>
       </Card>

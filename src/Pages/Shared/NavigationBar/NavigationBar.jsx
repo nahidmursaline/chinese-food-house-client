@@ -30,7 +30,7 @@ const NavigationBar = () => {
           </Nav>
           <Nav>
             {
-              user && <img style={{"height" : "38px"}} src={img} alt="" />
+              user && <img title= {user.displayName}style={{"height" : "38px"}} src={user.photoURL} alt="" />
             }
             
             

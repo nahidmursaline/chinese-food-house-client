@@ -1,11 +1,24 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
   return (
    <Container>
+    <Pdf targetRef={ref} filename="code-example.pdf">
+          {({ toPdf }) => (
+            <button
+              className="text-white font-semibold px-4 py-2 rounded-lg bg-blue-700"
+              onClick={toPdf}
+            >
+              Download a copy
+            </button>
+          )}
+        </Pdf>
      <div>
       <h2 className='text-center m-5'>Blogs</h2>
+      <div className='p-4' ref={ref}>
       <div>
         <h6>
           Tell us the differences between uncontrolled and controlled
@@ -37,6 +50,7 @@ const Blog = () => {
         <p>Answer: A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. That's it! If you have code in a component that you feel would make sense to extract, either for reuse elsewhere or to keep the component simpler, you can pull that out into a function.Jan</p>
 
 
+      </div>
       </div>
     </div>
    </Container>
