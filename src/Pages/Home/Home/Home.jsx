@@ -12,7 +12,7 @@ const Home = () => {
       <div className="sec m-5">
         <div>
           {' '}
-          <LazyLoad height={762} threshold={0.95}>
+          <LazyLoad height={550} threshold={0.95}>
             <img className="cimg" src={image} />
           </LazyLoad>
          

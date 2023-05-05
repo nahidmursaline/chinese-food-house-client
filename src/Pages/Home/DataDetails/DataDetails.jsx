@@ -44,6 +44,20 @@ const DataDetails = () => {
             <p>Recipes ingredients: {recipes[0].ingredients}</p>
             <p>Recipes cooking_method: {recipes[0].cooking_method}</p>
             <p>Recipes rating: {recipes[0].rating}</p>
+            <br />
+            <h6>Recipes Name: {recipes[1].name}</h6>
+            <p>Recipes description: {recipes[1].description}</p>
+            <p>Recipes ingredients: {recipes[1].ingredients}</p>
+            <p>Recipes ingredients: {recipes[1].ingredients}</p>
+            <p>Recipes cooking_method: {recipes[1].cooking_method}</p>
+            <p>Recipes rating: {recipes[1].rating}</p>
+            <br />
+            <h6>Recipes Name: {recipes[2].name}</h6>
+            <p>Recipes description: {recipes[2].description}</p>
+            <p>Recipes ingredients: {recipes[2].ingredients}</p>
+            <p>Recipes ingredients: {recipes[2].ingredients}</p>
+            <p>Recipes cooking_method: {recipes[2].cooking_method}</p>
+            <p>Recipes rating: {recipes[2].rating}</p>
             
           </Card.Text>
           <Button onClick={handleFavourite} variant="primary" disabled ={disable && true}>Favourite</Button>

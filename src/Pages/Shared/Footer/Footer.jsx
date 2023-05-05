@@ -9,13 +9,13 @@ const Footer = () => {
         <Row>
           <Col md={4} sm={6}>
             <h4>About Us</h4>
-            <p>We are a Chinese restaurant that specializes in authentic cuisine from various regions of China.</p>
+            <p>We are introducing the chef's that specializes in authentic cuisine from various regions of China.</p>
           </Col>
           <Col md={4} sm={6}>
             <h4>Contact Us</h4>
-            <p>123 Main St, Anytown, USA</p>
-            <p>Phone: (555) 555-5555</p>
-            <p>Email: info@chineserestaurant.com</p>
+            <p>Dhanmondi 32, Dhaka, Bangladesh</p>
+            <p>Phone: 01741946124</p>
+            <p>Email: nahidmursalinee@gmail.com</p>
           </Col>
           <Col md={4} sm={12}>
             <h4>Follow Us</h4>
@@ -29,7 +29,7 @@ const Footer = () => {
         </Row>
         <Row>
           <Col md={12}>
-            <p className="text-center">Copyright © 2023 Chinese Restaurant.
+            <p className="text-center">Copyright © 2023 Chinese Food House.
               <br />All rights reserved.</p>
           </Col>
         </Row>

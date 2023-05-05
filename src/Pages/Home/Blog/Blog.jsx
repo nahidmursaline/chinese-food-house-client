@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
 
@@ -8,12 +8,13 @@ const Blog = () => {
    <Container>
     <Pdf targetRef={ref} filename="code-example.pdf">
           {({ toPdf }) => (
-            <button
-              className="text-white font-semibold px-4 py-2 rounded-lg bg-blue-700"
-              onClick={toPdf}
-            >
-              Download a copy
-            </button>
+            <Button className='ms-auto mt-3' onClick={toPdf} variant="primary">Download a copy</Button>
+            // <button
+            //   className="text-white px-4 py-2 rounded-lg "
+            //   onClick={toPdf}
+            // >
+            //   Download a copy
+            // </button>
           )}
         </Pdf>
      <div>
